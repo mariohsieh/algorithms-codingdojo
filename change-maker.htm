@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Change Maker - Coding Dojo - Warm Ups</title>
+</head>
+<body>
+	<script>
+		/* 
+			write a function that takes an amount of money and rounds it to the nearest penny.
+			Then, have it print out the minimum amount of coins needed to make that amount.
+
+			example: 4.167 -> 4.17 --> quarters: 16, dimes: 1, nickels: 1, pennies: 2
+		*/
+
+		function ChangeMaker(num) {
+
+			num = num.toFixed(2);
+			num = parseFloat(num);
+			console.log(num);
+			var quarters;
+			var dimes;
+			var nickels;
+			var pennies;
+
+
+			var temp;
+
+			if (num >= 1) {
+				temp = Math.floor(num);
+				console.log(temp);
+				quarters = 4*temp;
+				num = num-temp;
+			}
+
+			num = num.toFixed(2);
+			num = parseFloat(num);
+			//console.log(num);
+
+			if (num >= .1) {
+				dimes = Math.floor(num*10);
+				console.log(dimes);
+				console.log(num);
+				num = num-(dimes*.1);
+			}
+
+			num = num.toFixed(2);
+			num = parseFloat(num);
+				
+			if (num >= .05) {
+				nickels = Math.floor(num*100/5);
+				console.log(nickels);
+				num = ((num*100)%5)/100;
+			}
+
+			if (num >= .01) {
+				pennies = 100*num;
+			}
+
+			console.log(num);
+			
+			return "Quarters: "+quarters+"\nDimes: "+dimes+"\nNickels: "+nickels+"\nPennies: "+pennies;
+		}
+
+		number = 1.36;
+		console.log(ChangeMaker(number));
+	</script>
+</body>
+</html>
+
+

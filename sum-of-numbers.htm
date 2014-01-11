@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Sum of Digits - Coding Dojo - Warm Ups</title>
+</head>
+<body>
+	<script>
+		/* 
+			Given a positive integer, calculate the sum of the digits.  do this until the sum of the digits is only a single integer
+		*/
+
+		function SumOfDigits(num) {
+
+			var str = num.toString();
+
+			while (str.length>1) {
+				var sum = 0;
+				for (var i=0;i<str.length;i++) {
+					sum += parseInt(str[i]);
+					console.log(sum);
+				}
+				str = sum.toString();
+			}
+
+			return sum;
+		}
+
+		num = 39201;	// should be 6
+		//console.log(SumOfDigits(num));
+
+
+		// using recursion
+		function digitSum(number) {
+			
+			var str = number.toString();
+
+			if (str.length>1) {
+				var sum = 0;
+				for (var i=0;i<str.length;i++) {
+					sum += parseInt(str[i]);
+					console.log(sum);
+				}		
+				sum = parseInt(sum);
+			} else {
+				return parseInt(str);
+			}
+
+			return digitSum(sum);
+		}
+
+
+		console.log(digitSum(num));
+
+	</script>
+</body>
+</html>

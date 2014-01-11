@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Ascending Numbers - Coding Dojo - Warm Ups</title>
+</head>
+<body>
+	<script>
+		/* 
+			Given an array of numbers, return true if each number is equal or greater than the one before it.
+
+			Hard mode: no loops
+		*/
+
+		function AscendingNumbers(arr) {
+
+			for (var i=0;i<arr.length-1;i++) {
+				if (arr[i] > arr[i+1])
+					return false;
+			}
+
+			return true;
+		}
+
+		//numbers = [1,2,3,4,5,6,7,8];
+		numbers = [32,4,13,21,98];
+		console.log(AscendingNumbers(numbers));
+	</script>
+</body>
+</html>

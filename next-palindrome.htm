@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Sum of Digits - Coding Dojo - Warm Ups</title>
+</head>
+<body>
+	<script>
+		/* 
+			given an integer, find the next palindrome greater than said integer.
+			example: 27-> 131
+			999->1001
+		*/
+
+		function NextPalindrome(num) {
+			num++;
+			console.log(num);			
+			var str1 = num.toString();
+			var str2 = str1.split("").reverse().join("");
+
+			if (str1 == str2)
+				return parseInt(str1);
+			else 
+				return NextPalindrome(num);
+		}
+
+		//number = 12;
+		number = 999;
+		console.log(NextPalindrome(number));
+	</script>
+</body>
+</html>

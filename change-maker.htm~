@@ -62,7 +62,7 @@
 			return "Quarters: "+quarters+"\nDimes: "+dimes+"\nNickels: "+nickels+"\nPennies: "+pennies;
 		}
 
-		number = 9.96;
+		number = 1.36;
 		console.log(ChangeMaker(number));
 	</script>
 </body>

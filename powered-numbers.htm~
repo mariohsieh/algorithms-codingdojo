@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Powered Numbers - Coding Dojo - Warm Ups</title>
+</head>
+<body>
+	<script>
+		/* 
+			given a string containing numbers, "a b", return the last digit produced by a^b.  
+		*/
+
+		function PoweredNumbers(str) {
+			str = str.split(" ");
+
+			var num1 = parseInt(str[0]);
+			var num2 = parseInt(str[1]);
+
+			var temp = 1;
+
+			for (var i=1;i<=num2;i++) {
+
+				temp *= num1;
+
+			}
+
+			return temp;
+		}
+
+		string = "2 3";
+		console.log(PoweredNumbers(string));
+	</script>
+</body>
+</html>
